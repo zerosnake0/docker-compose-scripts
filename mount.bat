@@ -1,0 +1,1 @@
+docker-machine ssh default "sudo mount -t vboxsf -o umask=0077 docker-share /docker-share"
