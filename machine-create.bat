@@ -14,5 +14,5 @@ docker-machine create ^
   --virtualbox-share-folder "%ds%:docker-share" ^
   default
 docker-machine ssh default "sudo mkdir -p /docker-share"
-docker-machine ssh default "sudo mount -t vboxsf -o umask=0077 docker-share /docker-share"
+docker-machine ssh default "sudo mount -t vboxsf -o dmask=0000,fmask=0111 docker-share /docker-share"
 endlocal
